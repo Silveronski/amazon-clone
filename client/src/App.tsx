@@ -14,8 +14,6 @@ function App() {
             <Container className='mt-3'>
               <Routes>
                 <Route path='/' element={<Home/>}></Route>
-                <Route></Route>
-                <Route></Route>
               </Routes>
             </Container>
           </main>

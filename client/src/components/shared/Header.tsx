@@ -5,6 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import SearchBox from './SearchBox';
 
 const Header: React.FC = () => {
     return (
@@ -21,12 +22,13 @@ const Header: React.FC = () => {
                         </Navbar.Brand>
                     </LinkContainer>
                     {" "}
-                    <nav className='d-flex allign-items-center'>
-                        <Link to={'/cart'} className='nav-link'>
+                    <SearchBox/>
+                    <nav className='d-flex allign-items-center justify-content-end me-2 ms-4'>
+                        <Link to={'/cart'} className='nav-link me-2'>
                             <FontAwesomeIcon icon={faShoppingCart} className="text-white"/>
                         </Link>
+                        <Link className='nav-link text-white' to={'/signin'}>Sign In</Link>
                     </nav>
-                    <Link className='nav-link text-white' to={'/signin'}>Sign In</Link>
                 </Container>
             </Navbar>
         </header>
